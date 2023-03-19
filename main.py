@@ -61,7 +61,7 @@ def display_song(sp, song):
 
 def main():
     scope = "user-read-playback-state"
-    username="toni"
+    username = os.environ.get("USERNAME")
     token = util.prompt_for_user_token(username, scope)
     sp = spotipy.Spotify(auth=token)
 
